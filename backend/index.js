@@ -1,9 +1,12 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
+
+require('dotenv').config()
+const CONNECTIONSTRING = process.env.CONNECTIONSTRING
+
 const userRoutes = require("./routes/user.routes")
 const filmRoutes = require("./routes/film.routes")
-
 
 const app = express()
 
@@ -12,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 
 
-mongoose.connect("mongodb+srv://itsosmartinez:Bl3IzDUd3qMAmj67@cluster0.fabyljk.mongodb.net/peliculas")
+mongoose.connect(CONNECTIONSTRING)
 .then(()=>{
     console.log(`Conexion con base de datos exitosa`)
 })
@@ -23,6 +26,6 @@ mongoose.connect("mongodb+srv://itsosmartinez:Bl3IzDUd3qMAmj67@cluster0.fabyljk.
 app.use("/api/users",userRoutes)
 app.use("/api/films",filmRoutes)
 
-app.listen(3000, ()=>{
-    console.log(`API funcionado... en puerto 3000`)
+app.listen(process.env.PORT, ()=>{
+    console.log(`API funcionado... puerto CORRECTO!`)
 })

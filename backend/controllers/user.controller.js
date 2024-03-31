@@ -2,6 +2,8 @@ const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const User = require("../models/user.model")
 
+const  secretKey= process.env.JWTSECRET;
+
 async function login(req,res){
     try {
         const foundUser = await User.findOne({email: req.body.email})
@@ -16,8 +18,8 @@ async function login(req,res){
                 return res.status(400).json({msg: "credenciales no válidas"})
             }
             else{
-                const token = jwt.sign({userId: foundUser._id}, "DXdd21@ace4",{expiresIn: '1h'})
-                return res.status(200).json({msg: "ok", token: token})
+                const token = jwt.sign({userId: foundUser._id}, secretKey,{expiresIn: '1h'})
+                return res.status(200).json({msg: "ok", token: token, role:foundUser.role})
             }
         }
     } catch (error) {
