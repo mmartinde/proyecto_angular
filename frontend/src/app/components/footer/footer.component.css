@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenedor{
+    background-color: #FFEACE;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+} 
+
+.contenedor p{
+    font-family: "Catamaran", sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 1px;
+    color: #976B47;
+}

@@ -1,4 +1,7 @@
-footer{
+footer {
     position: fixed;
     bottom: 0;
+    width: 100%;
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
 }

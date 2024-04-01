@@ -7,7 +7,8 @@ body {
   width: 100%;
 }
 
-.registerText {font-family: "Catamaran", sans-serif;
+.registerText {
+  font-family: "Catamaran", sans-serif;
   font-weight: bold;
   padding: 10px;
   color: #976B47;
@@ -52,7 +53,7 @@ form {
     font-family: "Noto Sans", sans-serif;
     background-color:#F68F23;
     color: #FFEACE;
-  width: 30vh;
+    width: 30vh;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -65,6 +66,39 @@ form {
   background-color: #D17100; 
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.resiterBtn {
+  font-family: "Noto Sans", sans-serif;
+  background-color:#F68F23;
+  color: #FFEACE;
+  width: 22vh;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 1vh;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px #976B47);
+}
+
+.resiterBtn:hover{
+  background-color: #D17100; 
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+.hideButton{
+  font-size: 14px;
+  color: #FFEACE;
+  width: 6vh;
+  height: 2.6lh;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 1vh;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 2px #976B47);
+}
+
   .alreadyMember {border: none;
     background: none;
     font:bolder;
@@ -115,7 +149,8 @@ form {
     display: block;
     margin-bottom: 8px;
   }
-   
+
+
   input {
     font-family: "Noto Sans", sans-serif;
     width: 90%;
@@ -127,6 +162,7 @@ form {
     margin-bottom: 12px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
+  
   input:focus {
     outline: none;
     border-color: #005247;

@@ -9,12 +9,15 @@ import { FimlsCreateData } from '../interfaces/dto/films-create-data';
 export class FilmService {
   url:string ='http://localhost:3000/api/films'
 
-  constructor(private http: HttpClient, private cookies:CookieService) {
-    
-   }
+  constructor(private http: HttpClient, private cookies:CookieService) {}
+
 
   findAll (){
     return this.http.get(`${this.url}?token=${this.cookies.get('token')}`);
+  }
+
+  findById(id:string){
+    return this.http.get(`${this.url}/${id}?token=${this.cookies.get('token')}`)
   }
 
   insert (data: FimlsCreateData){

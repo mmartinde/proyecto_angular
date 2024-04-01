@@ -1,12 +1,16 @@
-<body class="body">
+<div class="body">
     @if(showLoginForm){
         <div class="registerText">
             <h2 class="iniciar">Iniciar Sesión</h2>
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <label for="email">e-mail:</label>
                 <input formControlName="email" id="email" type="email"/>
+                
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" formControlName="password" /><button (click)="togglePasswordVisibility()">🔐</button>
+                <input formControlName="password" id="password" [type]="hidePassword? 'password':'text'"/> 
+                <button class="hideButton" type="button" (click)="hidePassword=!hidePassword" placeholder="Password">🔐</button>
+                
+                
                 <button type="submit" class="submitButton">Iniciar sesión</button>
             </form>
             <div class="resgistrate"><p>Si no tienes una cuenta,<button class="resiterBtn" (click)="toggleForm()">Registrate aquí</button></p></div>
@@ -25,10 +29,14 @@
                 <input type="text" id="name" formControlName="name" />
                 <label for="surname">Apellidos:</label>
                 <input type="text" id="surname" formControlName="surname" />
+                
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" formControlName="password" />
+                <input formControlName="password"  id="password" [type]="hidePassword ? 'password' : 'text'"/>
+                
                 <label for="confirmPassword">Repetir contraseña:</label>
-                <input type="password" id="confirmPassword" formControlName="confirmPassword"/>
+                <input formControlName="confirmPassword" id="confirmPassword" [type]="hidePassword ? 'password' : 'text'"/>
+                <button type="button" (click)="hidePassword=!hidePassword" placeholder="Password">🔐</button>
+                
                 <button type="submit" class="submitButton">Registrarse</button>
             </form>
         </div>
@@ -37,4 +45,4 @@
         </div>
     }
 
-</body>
+</div>

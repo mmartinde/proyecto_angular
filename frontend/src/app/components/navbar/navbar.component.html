@@ -1,16 +1,28 @@
-<nav>
-    <ul>
-        <li>
-            <a routerLink="/">Home</a>
-        </li>
-        <li>
-            <a routerLink="/login">Login</a>
-        </li>
-        <li>
-            <a routerLink="/register">Register</a>
-        </li>
-        <li>
-            <a routerLink="/films">Films</a>
-        </li>
-    </ul>
-</nav>
+<div class="container">
+    <nav class="navbar">
+        <ul>
+            @if((hayToken && soyAdmin)){
+                <li>
+                    <a class="icon" routerLink="/adminFilms">Admin Películas</a>
+                </li>
+                <li>
+                    <a class="icon" routerLink="/adminUsers">Admin Usuarios</a>
+                </li>
+            }
+            @if(hayToken){ 
+                <li  routerLink="/films" routerLinkActive="active">
+                    <img  class="icon" src="../../../assets/video.png" title="Films">
+                </li>
+                <button class="nav_ul_li_button" type = "button" (click) = "doLogout()" routerLink="/">Cerrar Sesión</button>
+            }@else {
+                <li  routerLink="/" routerLinkActive="active">
+                    <img class="icon" src="../../../assets/home.png" title="Home">
+                </li>
+                
+                <li  routerLink="/login" routerLinkActive="active">
+                    <img class="icon" src="../../../assets/login.png" title="Login">
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
