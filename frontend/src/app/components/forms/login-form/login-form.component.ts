@@ -75,6 +75,7 @@ export class LoginFormComponent implements OnInit{
           (response) => {
             console.log('Register successful', response);
             console.log(this.registerForm.value);
+            alert('Enhorabuena, se ha registrado con exito');
             this.router.navigate(['/login']);
           },
           (error) => {
