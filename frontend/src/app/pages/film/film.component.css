@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, html {
+    height: 100%; /* Asegura que el cuerpo y el HTML ocupen toda la altura */
+    margin: 0; /* Elimina el margen predeterminado */
+    display: flex; /* Usa flexbox para centrar el contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+.film-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 50%;
+    background-color: black;
+    margin:20px auto;
+    border-radius: 10px;
+}
+.film-image film-detail{
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 20px 100px;
+    background-color: black;
+}
+.film-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    border: 2px #976B46 solid;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    margin: 2px auto;
+}
+    .film-title {
+        margin: 5px 15px;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        color: #976B47;
+        font-size: 1.8rem;
+    }
+    .film-director {
+        margin: 5px 15px;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        color: #976B47;
+        font-size: 0.9rem;
+    }
+
+.film-info{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin:5px 10px 5px 30px;
+    border-radius: 20px;
+}
+    .film-year {
+        margin: 5px 15px;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        color: white;
+        font-size: 0.8rem;
+    }
+    .film-category {
+        margin: 5px 15px;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        color: white;
+        font-size: 0.8rem;
+    }
+    .film-synopsis {
+        margin: 5px 15px;
+        text-align:left ;
+        font-family: "Noto Sans", sans-serif;
+        color: white;
+        font-size: 0.8rem;
+        margin: 5px 10px 5px 27px;
+        padding-left: 15px;
+    }

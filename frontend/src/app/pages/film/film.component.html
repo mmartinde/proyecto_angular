@@ -1,0 +1,26 @@
+<!-- Container for the film information -->
+<div class="film-container">
+
+    <!-- Film image -->
+    <img class="film-image" src="{{film.img}}" alt="{{film.title}}" />
+
+    <!-- Film details -->
+    <div class="film-details">
+
+    <!-- Film title and director -->
+    <div class="film-header">
+        <h5 class="film-title"> {{film.title}} </h5>
+        <h5 class="film-director"> <strong>Director:</strong> {{film.director}} </h5>        
+    </div>
+
+    <!-- Release year and category -->
+    <div class="film-info">
+        <h5 class="film-year"><strong>Year:</strong> {{film.year}}</h5>
+        <p class="film-category"> <strong>Category:</strong> {{film.category}}</p>
+    </div>
+
+    <!-- Film synopsis -->
+    <p class="film-synopsis"> {{film.synopsis}}</p>
+
+    </div>
+</div>

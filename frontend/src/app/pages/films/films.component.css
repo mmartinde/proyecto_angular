@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: white;
+    margin:20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contenedor_films{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 100px 50px;
+    background-color:  #ff8400bb;
+    margin:20px;
+    border-radius: 10px;
+}
+.contenedor_films_film{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    border: 2px #976B47;
+    border-radius: 2px;
+    background-color: white;
+    color: grey;
+    margin: 30px 20px;
+}
+.contenedor_films_film_img{
+    width: 180px;
+    height: 200px;
+    padding: 10px;
+}
+
+.contenedor_films_film_img_h4{
+    margin: 5px 15px;
+    font-family: "Noto Sans", sans-serif;
+    color: #976B47;
+    font-size: 0.8rem;
+}
