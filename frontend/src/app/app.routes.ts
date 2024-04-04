@@ -7,6 +7,8 @@ import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 import { AdminFilmsComponent } from './pages/admin-films/admin-films.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FilmComponent } from './pages/film/film.component';
+import { userProtectGuard } from './guards/user-protect.guard';
+import { adminProtectGuard } from './guards/admin-protect.guard';
 
 export const routes: Routes = [
     {
@@ -22,27 +24,24 @@ export const routes: Routes = [
         component: RegisterComponent,
     },
     {
-        path: 'films',
-        component:FilmsComponent,
-    },
-    {
         path: "films",
         component: FilmsComponent,
-        /* canActivate: [authGuard], */
         children: [{            
             component: FilmComponent,
             path: ":id",
-        }]
+        }],
+        canActivate:[userProtectGuard]
     },
     {
         path: "adminUsers",
         component: AdminUsersComponent,
+        canActivate:[userProtectGuard, adminProtectGuard]
         
     },
     {
         path: "adminFilms",
         component: AdminFilmsComponent,
-        
+        canActivate:[userProtectGuard, adminProtectGuard]
     },
     {
         path: "**",

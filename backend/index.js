@@ -2,18 +2,22 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 
-require('dotenv').config()
-const CONNECTIONSTRING = process.env.CONNECTIONSTRING
-
 const userRoutes = require("./routes/user.routes")
 const filmRoutes = require("./routes/film.routes")
 
+require('dotenv').config()
+
 const app = express()
 
-app.use(cors())
+// Configuración de CORS para permitir solicitudes desde cualquier origen
+
+app.use(cors());
 
 app.use(express.json())
 
+app.set("secretKey", process.env.JWTSECRET)
+
+const CONNECTIONSTRING = process.env.CONNECTIONSTRING
 
 mongoose.connect(CONNECTIONSTRING)
 .then(()=>{

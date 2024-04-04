@@ -62,4 +62,6 @@ export class UserService {
     this.http.delete(`${this.url}/login/:${id}?token=${this.cookies.get('token')}`)
   }
 
+  
+
 }

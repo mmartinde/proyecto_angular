@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { FimlsCreateData } from '../interfaces/dto/films-create-data';
+import { FilmCreateData } from '../interfaces/dto/films-create-data';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class FilmService {
     return this.http.get(`${this.url}/${id}?token=${this.cookies.get('token')}`)
   }
 
-  insert (data: FimlsCreateData){
+  insert (data: FilmCreateData){
     return this.http.post(`${this.url}?token=${this.cookies.get('token')}`, data)
   }
 

@@ -1,4 +1,4 @@
-export interface FimlsCreateData {
+export interface FilmCreateData {
     title: string,
     year: number,
     img: string,
