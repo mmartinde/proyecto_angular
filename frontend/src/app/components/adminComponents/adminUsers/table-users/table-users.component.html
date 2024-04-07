@@ -1,0 +1,25 @@
+<div class="contenedor">
+    <form class="titleInputAndButtonUsers" [formGroup]="searcherUser" (ngSubmit)="searchUser()">
+        <label>Filtra los usuarios por nombre</label>
+        <fieldset class="inputAndButtonUsers">
+            <input type="text" formControlName="user" placeholder="Introduzca nombre" />
+            <button type="submit">Buscar</button>
+        </fieldset>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de Usuario</th>
+                <th>ID</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of (usersFiltered.length > 0 ? usersFiltered : users); let i = index">
+                <td>{{ item.name }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item._id }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

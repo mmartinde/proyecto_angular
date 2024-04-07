@@ -2,11 +2,11 @@
     <nav class="navbar">
         <ul>
             @if((hayToken && soyAdmin)){
-                <li>
-                    <a class="icon" routerLink="/adminFilms">Admin Películas</a>
+                <li routerLink="/adminFilms">
+                    <img  class="icon" src="../../../assets/managementFilms.png" title="Administrar Películas">
                 </li>
-                <li>
-                    <a class="icon" routerLink="/adminUsers">Admin Usuarios</a>
+                <li routerLink="/adminUsers">
+                    <img  class="icon" src="../../../assets/managementUser.png" title="Administrar Usurarios">
                 </li>
             }
             @if(hayToken){ 

@@ -1,0 +1,7 @@
+<div class="contenedor">
+  <form class="boxDelete" [formGroup]="delFilmForm" (ngSubmit)="deleteFilm()">
+    <label>Borrar películas por ID</label>
+    <input placeholder="Introduzca ID de la película" type="text" formControlName="id" />
+    <button [disabled]="!delFilmForm.valid" type="submit">Eliminar</button>
+  </form>
+</div>

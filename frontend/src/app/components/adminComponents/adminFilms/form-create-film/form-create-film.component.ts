@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FilmService } from '../../../../../../../services/film.service';
-import { FilmCreateData } from '../../../../../../../interfaces/dto/films-create-data';
+import { FilmService } from '../../../../services/film.service';
+import { FilmCreateData } from '../../../../interfaces/dto/films-create-data';
 
 @Component({
   selector: 'app-form-create-film',

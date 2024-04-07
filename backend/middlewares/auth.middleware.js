@@ -32,11 +32,10 @@ async function isAdmin(req, res, next){
         const userId = tokenDecoded.userId
         const foundUser = await User.findById(userId)
         if(!foundUser){
-           return res.status(401).json({msg: "token no valido"})
+          return res.status(401).json({msg: "token no valido"})
         } else{
             if(foundUser.role !== "admin"){
                 return res.status(403).json({msg: "no eres admin"})
-
             } else{
                 next()
             }

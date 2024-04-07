@@ -58,10 +58,12 @@ export class UserService {
     this.tokenSubject.next("")
   }
 
-  deleteUser(id:string , token:string){
-    this.http.delete(`${this.url}/login/:${id}?token=${this.cookies.get('token')}`)
+  findAllUsers(){
+    return (this.http.get(`${this.url}?token=${this.cookies.get('token')}`));
   }
 
-  
+  deleteUser(id:string){
+    return this.http.delete(`${this.url}/${id}?token=${this.cookies.get('token')}`)
+  }
 
 }

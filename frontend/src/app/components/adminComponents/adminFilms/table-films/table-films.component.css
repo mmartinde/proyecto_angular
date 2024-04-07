@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 350px;
+    height: auto;
+    background-color: #f39950;
+    margin-top: 20px;
+}
+.boxFilms{
+    display: flex;
+    flex-flow: column wrap;
+    width: 80%;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+}
+.boxFilms label{
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  color: whitesmoke;
+  margin: 10px 20px;
+  text-align: center;
+}
+.boxFilms input{
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  margin: 10px 20px;
+  font-size: clamp(8px, 3vw, 24px);
+  font-weight: 200px;
+}
+.boxFilms input::placeholder {
+  font-size: clamp(4px, 1.5vw, 16px);
+}
+.boxFilms button{
+  align-items: center;
+  width: 60%;
+  height: 30px;
+  margin: 10px 20px;
+  color: black;
+  border-radius: 10px;
+  text-align: center;
+}
+.boxFilms button{
+  width: 30%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #D17100;
+  color: whitesmoke;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 700;
+}
+.boxFilms button:hover{
+  cursor: pointer;
+  scale:1.1;
+}
+
+table {
+    display: block;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;    
+    margin: 30px auto;
+}
+table thead, table tbody{
+  border: 5px solid whitesmoke;
+}
+table thead{
+  height: 40px;
+}
+table tbody{
+  width: 100%;
+}
+
+table th, table td {
+  font-family: "Noto Sans", sans-serif;
+  height: 120px;
+  color:white;
+  border: 3px solid whitesmoke;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+table th {
+  height: 50px;
+  background-color: #000000;
+  font-weight: bold;
+  
+}
+table tr:hover {
+  background-color: #423d3d;
+}
+table tr img {
+  margin: 0 auto;
+  height: 100px;
+}

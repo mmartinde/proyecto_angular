@@ -14,10 +14,9 @@ const { isAdmin, isAuthenticated } = require("../middlewares/auth.middleware");
 const {middleWareVerifYCambioContrasena} = require ("../middlewares/usuario.middleware")
 
 router.get("/", isAdmin ,searchUsers);
-
 router.post("/signup", signup);
-
 router.post("/login", login);
+router.delete("/:id", isAdmin, borrarUsuario);
 
 /* 
 * Para modificar un usuario, tendremos que poner en la ruta el "id" del usuario a modificar y añadir la query "?token=..(token de admin).."

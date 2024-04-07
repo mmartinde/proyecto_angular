@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 350px;
+    height: auto;
+    background-color: #f39950;
+    margin-top: 20px;
+}
+.boxDelete{
+    display: flex;
+    flex-flow: column wrap;
+    width: 80%;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid whitesmoke;
+    border-radius: 20px;
+}
+.boxDelete label{
+    font-family: "Noto Sans", sans-serif;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 600;
+    color: whitesmoke;
+    margin: 10px 20px;
+    text-align: center;
+}
+.boxDelete input{
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    margin: 10px 20px;
+    font-size: clamp(8px, 3vw, 24px);
+    font-weight: 200px;
+  }
+  .boxDelete input::placeholder {
+    font-size: clamp(4px, 1.5vw, 16px);
+  }
+  .boxDelete button{
+    align-items: center;
+    width: 60%;
+    height: 30px;
+    margin: 10px 20px;
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .boxDelete button{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #D17100;
+    color: whitesmoke;
+    font-size: clamp(12px, 2vw, 16px);
+    font-weight: 700;
+  }
+  .boxDelete button:hover{
+    cursor: pointer;
+    scale:1.1;
+  }

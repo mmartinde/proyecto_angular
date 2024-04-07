@@ -10,3 +10,4 @@ export const adminProtectGuard: CanActivateFn = (route, state) => {
   }else{
     return false
   }
+};

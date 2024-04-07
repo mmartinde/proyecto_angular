@@ -1,0 +1,25 @@
+<div class="contenedor">
+    <form class="boxFilms" [formGroup]="searcherFilm" (ngSubmit)="searchFilm()">
+        <label class="titleBox">Filtrar película por nombre</label>
+        <input class="textBox" type="text" formControlName="film" placeholder="introducir título" />
+        <button [disabled]="!searcherFilm.valid" type="submit">Buscar</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>ID</th>
+                <th>Título</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of (filmsFiltered.length > 0 ? filmsFiltered : films); let i = index">
+                <td>
+                    <img [src]="x.img" [alt]="x.title" />
+                </td>
+                <td>{{ x._id }}</td>
+                <td>{{ x.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

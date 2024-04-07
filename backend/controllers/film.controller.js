@@ -45,10 +45,10 @@ async function insert(req, res) {
 async function deleteOne(req, res){
 try{
     const filmDeleted = await Film.findByIdAndDelete(req.params.id)
-    return res.json({msg: "pelicula elminada: ", filmDeleted })
+    return res.status(200).json({msg: "pelicula elminada: ", filmDeleted })
 } catch(error){
     console.log(error)
-    return res.status(500).json({msg: "error al borrar la pelicula"})
+    return res.status(500).json({msg: "error interno del servidor"})
 
 }}
 
