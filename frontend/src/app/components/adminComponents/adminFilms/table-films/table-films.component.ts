@@ -30,7 +30,7 @@ export class TableFilmsComponent implements OnInit{
         this.films = res as Film[],
         console.log('aqui films', this.films)
       },
-      error:(err) => console.log('error al cargar alguna pelicula (fallo en carga de imagen)')
+      error:(err) => console.log('error al cargar alguna pelicula')
     })
   }
 

@@ -15,11 +15,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of (usersFiltered.length > 0 ? usersFiltered : users); let i = index">
-                <td>{{ item.name }}</td>
-                <td>{{ item.email }}</td>
-                <td>{{ item._id }}</td>
-            </tr>
+            @for (user of (usersFiltered.length > 0 ? usersFiltered : users); track user._id) {
+                <tr>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user._id }}</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
